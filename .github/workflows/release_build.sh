@@ -1,6 +1,7 @@
 #!/bin/sh -eux
 
-version="${GITHUB_REF#v}"
+tag="$(git rev-parse --symbolic --abbrev-ref "${GITHUB_REF}")"
+version="${tag#v}"
 os="${GOOS}"
 arch="${GOARCH}"
 archive="imagedeploy-${version}-${os}-${arch}.tar.gz"
