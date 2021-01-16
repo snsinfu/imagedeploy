@@ -2,7 +2,7 @@
 
 set -o pipefail
 
-while read oldrev newref ref; do
+while read oldrev newrev ref; do
     branch="$(git rev-parse --symbolic --abbrev-ref "${ref}")"
 
     case "${branch}" in

@@ -36,7 +36,7 @@ func (opts *Apply) command() command.Line {
 	return cmd
 }
 
-// Apply holds arguments for `kubectl rollout restart`.
+// RolloutRestart holds arguments for `kubectl rollout restart`.
 type RolloutRestart struct {
 	Resources []string
 	Namespace string

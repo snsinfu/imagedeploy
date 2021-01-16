@@ -1,4 +1,4 @@
-// Package kubectl wraps kubectl cli commands.
+// Package docker wraps docker cli commands.
 package docker
 
 import (
@@ -34,7 +34,7 @@ func (opts *Build) command() command.Line {
 	return cmd
 }
 
-// Build holds arguments for `docker push`.
+// Push holds arguments for `docker push`.
 type Push struct {
 	Name string
 }
@@ -51,7 +51,7 @@ func (opts *Push) command() command.Line {
 	return command.Line{"docker", "push", opts.Name}
 }
 
-// Build holds arguments for `docker image rm` (or `docker rmi`).
+// ImageRemove holds arguments for `docker image rm` (or `docker rmi`).
 type ImageRemove struct {
 	Name string
 }
