@@ -37,3 +37,4 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ${{ steps.build_linux_amd64.outputs.filename }}
           asset_name: ${{ steps.build_linux_amd64.outputs.filename }}
+          asset_content_type: application/octet-stream
