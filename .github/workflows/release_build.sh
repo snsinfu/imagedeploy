@@ -6,7 +6,7 @@ os="${GOOS}"
 arch="${GOARCH}"
 archive="imagedeploy-${version}-${os}-${arch}.tar.gz"
 
-go build -o imagedeploy .
+go build -o imagedeploy ./main
 tar -cz --numeric-owner --owner 0 --group 0 -f "${archive}" imagedeploy
 
 echo "::set-output name=filename::${archive}"
